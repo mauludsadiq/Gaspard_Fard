@@ -1,0 +1,2 @@
+import("gaspard/dag_main/core") as Core
+Core.run_core()

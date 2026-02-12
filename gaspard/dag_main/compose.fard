@@ -1,0 +1,23 @@
+import("math") as Math
+import("fold") as Fold
+
+{
+  compose_all: fn(nums, sum, pat_ok, res_ok) {
+    let squares =
+      Math.squares(nums)
+    in
+
+    let sum_squares =
+      Fold.sum_list(squares)
+    in
+
+    {
+      nums: nums,
+      sum: sum,
+      squares: squares,
+      sum_squares: sum_squares,
+      patterns: pat_ok,
+      results: res_ok
+    }
+  },
+}

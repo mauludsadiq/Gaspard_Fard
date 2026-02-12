@@ -1,0 +1,5 @@
+import("dag_main/core") as Core
+export(main)
+fn main() {
+  { "t": "ok", "v": 1 }
+}

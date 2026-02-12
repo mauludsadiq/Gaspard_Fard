@@ -1,0 +1,17 @@
+import("std/list") as L
+import("std/str") as S
+import("lines") as Lines
+
+{
+  words_from_text: fn(s) {
+    let ls =
+      Lines.split_lines_norm(s)
+    in
+
+    let parts =
+      L.map(ls, fn(line) { S.split_lines(S.trim(line)) })
+    in
+
+    L.concat(parts)
+  },
+}

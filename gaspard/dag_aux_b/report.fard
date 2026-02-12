@@ -1,0 +1,41 @@
+import("nums") as N
+import("powers") as P
+import("ranges") as R
+import("stats") as S
+
+{
+  build_report: fn() {
+    let base =
+      N.base()
+    in
+
+    let sq =
+      P.squares(base)
+    in
+
+    let cb =
+      P.cubes(base)
+    in
+
+    let rng =
+      R.range_inc(1, 5)
+    in
+
+    let sumBase =
+      S.sum(base)
+    in
+
+    let meanSquares =
+      S.mean(sq)
+    in
+
+    {
+      base: base,
+      squares: sq,
+      cubes: cb,
+      rng_list: rng,
+      sumBase: sumBase,
+      meanSquares: meanSquares
+    }
+  },
+}

@@ -1,0 +1,7 @@
+import("std/list") as L
+
+{
+  count_items: fn(xs) {
+    L.fold(xs, 0, fn(acc, _) { acc + 1 })
+  },
+}

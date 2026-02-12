@@ -1,0 +1,4 @@
+export(main)
+fn main() {
+  { "t": "ok", "v": 1 }
+}

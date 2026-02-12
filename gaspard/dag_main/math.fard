@@ -1,0 +1,10 @@
+import("std/list") as L
+import("std/int") as I
+
+{
+  base_numbers: fn() { [1, 2, 3, 4, 5] },
+
+  squares: fn(xs) {
+    L.map(xs, fn(x) { I.pow(x, 2) })
+  },
+}

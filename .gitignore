@@ -1,0 +1,8 @@
+out_*/
+out*/
+**/out_*/
+**/out*/
+*.bak
+*.bak_*
+.DS_Store
+.vscode/

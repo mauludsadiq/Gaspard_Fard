@@ -1,0 +1,13 @@
+import("std/result") as R
+
+{
+  run_results: fn() {
+    let r1 = R.ok(1) in
+    let r2 = R.ok(2) in
+    let r3 = R.err("E1") in
+    {
+      ok_pair:   R.andThen(r1, fn(x) { R.andThen(r2, fn(y) { R.ok(x + y) }) }),
+      err_chain: R.andThen(r3, fn(x) { R.andThen(r2, fn(y) { R.ok(x + y) }) }),
+    }
+  },
+}

@@ -1,0 +1,37 @@
+import("math") as Math
+import("fold") as Fold
+import("patterns") as Pat
+import("results") as Res
+import("compose") as Comp
+
+{
+  run_core: fn() {
+    let nums =
+      Math.base_numbers()
+    in
+
+    let folded =
+      Fold.sum_list(nums)
+    in
+
+    let pat_ok =
+      Pat.check_patterns({ a: 1, b: 2, xs: [1, 2, 3] })
+    in
+
+    let res_ok =
+      Res.run_results()
+    in
+
+    let composed =
+      Comp.compose_all(nums, folded, pat_ok, res_ok)
+    in
+
+    {
+      nums: nums,
+      sum: folded,
+      patterns: pat_ok,
+      results: res_ok,
+      composed: composed
+    }
+  },
+}

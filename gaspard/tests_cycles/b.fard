@@ -1,0 +1,2 @@
+import("a") as A
+{ b: fn() { 2 }, }

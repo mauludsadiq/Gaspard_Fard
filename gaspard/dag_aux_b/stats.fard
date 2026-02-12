@@ -1,0 +1,19 @@
+import("std/list") as L
+
+{
+  sum: fn(xs) {
+    L.fold(xs, 0, fn(acc, x) { acc + x })
+  },
+
+  mean: fn(xs) {
+    let n =
+      L.fold(xs, 0, fn(acc, _) { acc + 1 })
+    in
+
+    let total =
+      L.fold(xs, 0, fn(acc, x) { acc + x })
+    in
+
+    if n == 0 then { 0 } else { total / n }
+  },
+}

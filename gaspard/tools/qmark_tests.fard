@@ -1,0 +1,15 @@
+import("std/result") as R
+
+{
+  run_qmark_ok: fn() {
+    let ok1 = R.ok(10) in
+    let v = ok1? in
+    { ok_unwrapped: v }
+  },
+
+  run_qmark_err: fn() {
+    let err1 = R.err("E_Q") in
+    let _ = err1? in
+    0
+  },
+}

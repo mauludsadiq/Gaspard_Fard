@@ -1,0 +1,19 @@
+import("std/json") as J
+
+{
+  run_encode: fn(core_res, str_res, num_res, art_res) {
+    let rec =
+      { core: core_res, strings: str_res, numbers: num_res, artifacts: art_res }
+    in
+
+    let enc =
+      J.encode(rec)
+    in
+
+    let dec =
+      J.decode(enc)
+    in
+
+    { encoded_len: enc, roundtrip: dec }
+  },
+}

@@ -1,0 +1,2 @@
+import("gaspard/tools/qmark_tests") as Q
+Q.run_qmark_ok()

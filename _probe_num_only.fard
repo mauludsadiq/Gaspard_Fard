@@ -1,0 +1,2 @@
+import("gaspard/dag_aux_b/report") as R
+R.build_report()

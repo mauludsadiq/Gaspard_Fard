@@ -1,0 +1,7 @@
+import("std/int") as I
+import("std/list") as L
+
+{
+  squares: fn(xs) { L.map(xs, fn(x) { I.pow(x, 2) }) },
+  cubes:   fn(xs) { L.map(xs, fn(x) { I.pow(x, 3) }) },
+}

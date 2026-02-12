@@ -1,0 +1,7 @@
+import("std/list") as L
+
+{
+  sum_list: fn(xs) {
+    L.fold(xs, 0, fn(acc, x) { acc + x })
+  },
+}

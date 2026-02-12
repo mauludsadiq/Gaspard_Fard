@@ -1,0 +1,23 @@
+import("std/json") as J
+
+{
+  run_artifacts: fn() {
+    let payload =
+      { t: "ok", v: { k: 1 } }
+    in
+
+    let bytes =
+      J.encode(payload)
+    in
+
+    let _ =
+      emit_artifact("gaspard_payload.json", bytes)
+    in
+
+    let imported =
+      import_artifact("gaspard_payload.json")
+    in
+
+    { written: "gaspard_payload.json", imported_len: imported }
+  },
+}

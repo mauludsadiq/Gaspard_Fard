@@ -1,0 +1,7 @@
+import("std/list") as L
+
+{
+  range_inc: fn(start, stop) {
+    L.range(start, stop)
+  },
+}

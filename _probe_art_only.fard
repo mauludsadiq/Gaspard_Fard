@@ -1,0 +1,2 @@
+import("gaspard/tools/artifacts") as A
+A.run_artifacts()

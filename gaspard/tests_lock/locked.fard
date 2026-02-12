@@ -1,0 +1,2 @@
+import("pkg:nonexistent") as X
+{ locked: fn() { X.value }, }

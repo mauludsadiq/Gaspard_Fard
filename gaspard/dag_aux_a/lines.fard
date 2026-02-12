@@ -1,0 +1,11 @@
+import("std/str") as S
+import("strings") as Str
+
+{
+  split_lines_norm: fn(s) {
+    let trimmed =
+      Str.normalize(s)
+    in
+    S.split_lines(trimmed)
+  },
+}

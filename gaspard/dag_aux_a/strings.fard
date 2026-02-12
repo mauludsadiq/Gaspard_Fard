@@ -1,0 +1,7 @@
+import("std/str") as S
+
+{
+  normalize: fn(s) {
+    S.lower(S.trim(s))
+  },
+}

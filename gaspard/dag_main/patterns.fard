@@ -1,0 +1,10 @@
+{
+  check_patterns: fn(rec) {
+    match rec {
+      { a: a, b: b, xs: [x1, x2, x3] } =>
+        { t: "ok", v: { a: a, b: b, first: x1, second: x2, third: x3 } },
+      _ =>
+        { t: "err", e: "PATTERN_MISMATCH" },
+    }
+  },
+}

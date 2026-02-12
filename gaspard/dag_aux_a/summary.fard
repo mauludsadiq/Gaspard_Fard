@@ -1,0 +1,20 @@
+import("words") as W
+import("counts") as C
+
+{
+  build_summary: fn() {
+    let text =
+      " Hello\nWorld\nFARD\n "
+    in
+
+    let ws =
+      W.words_from_text(text)
+    in
+
+    let n =
+      C.count_items(ws)
+    in
+
+    { words: ws, count: n }
+  },
+}
