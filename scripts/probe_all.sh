@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -u
 
+# FARDRUN fallback (repo-local convenience)
+if [ -z "${FARDRUN:-}" ]; then
+  if [ -x "/Users/g.bogans/Downloads/FARD_v0.5/target/debug/fardrun" ]; then
+    export FARDRUN="/Users/g.bogans/Downloads/FARD_v0.5/target/debug/fardrun"
+  fi
+fi
+
+
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FARDRUN="${FARDRUN:-}"
 
