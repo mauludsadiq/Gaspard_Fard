@@ -33,5 +33,5 @@ import("compose") as Comp
       results: res_ok,
       composed: composed
     }
-  },
+  }
 }
