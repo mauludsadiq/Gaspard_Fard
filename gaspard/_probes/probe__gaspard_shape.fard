@@ -1,0 +1,7 @@
+import("../gaspard") as G
+
+# Assert exported shape (crashes if missing)
+let _m = G.main in
+
+# Call it and return the result (so the probe is also a behavioral check)
+G.main()

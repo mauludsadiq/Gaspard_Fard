@@ -5,46 +5,42 @@ import("tools/artifacts") as Art
 import("tools/encode") as Enc
 import("tools/qmark_tests") as Qm
 
-let M =
-  {
-    main: fn() {
-      let core_res =
-        Core.run_core()
-      in
+{
+  main: fn() {
+    let core_res =
+      Core.run_core()
+    in
 
-      let str_res =
-        StrSummary.build_summary()
-      in
+    let str_res =
+      StrSummary.build_summary()
+    in
 
-      let num_res =
-        NumReport.build_report()
-      in
+    let num_res =
+      NumReport.build_report()
+    in
 
-      let art_res =
-        Art.run_artifacts()
-      in
+    let art_res =
+      Art.run_artifacts()
+    in
 
-      let enc_res =
-        Enc.run_encode(core_res, str_res, num_res, art_res)
-      in
+    let enc_res =
+      Enc.run_encode(core_res, str_res, num_res, art_res)
+    in
 
-      let qm_ok =
-        Qm.run_qmark_ok()
-      in
+    let qm_ok =
+      Qm.run_qmark_ok()
+    in
 
-      {
-        t: "ok",
-        v: {
-          core: core_res,
-          strings: str_res,
-          numbers: num_res,
-          artifacts: art_res,
-          encoded: enc_res,
-          qmark_ok: qm_ok
-        }
+    {
+      t: "ok",
+      v: {
+        core: core_res,
+        strings: str_res,
+        numbers: num_res,
+        artifacts: art_res,
+        encoded: enc_res,
+        qmark_ok: qm_ok
       }
-    },
-  }
-in
-
-M.main()
+    }
+  },
+}
